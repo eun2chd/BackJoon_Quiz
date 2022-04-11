@@ -1,11 +1,11 @@
-package Pool;
+package Chapter3;
+
 
 import java.util.Scanner;
 
-public class Main {
-	
-	public static void main(String[] args) {
-		
+
+public class case_14 {
+	public static void main(String[] args)  {
 		Scanner input = new Scanner(System.in);
 		boolean flag = true;
 		
