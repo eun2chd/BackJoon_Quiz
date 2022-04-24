@@ -10,18 +10,16 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		int su1,su2;
 		
-		int A = sc.nextInt();
-		int B = sc.nextInt();
-		int C = sc.nextInt();
+		su1 = 50000;
+		su2 = 200;
 		
-		int arr[] = {A * B * C};
+		int res = su1 / su2;
 		
-		for(int i =0;i < arr.length;i++) {
-			System.out.println(arr[i]);
-		}
-
+		System.out.println(res);
+		
+		System.out.println(su2 * 250);
 		
 		
 	}
