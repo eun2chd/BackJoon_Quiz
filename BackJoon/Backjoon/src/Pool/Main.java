@@ -7,21 +7,26 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
-	
-	public static void main(String[] args) {
+
+	public static void main(String[] args)throws IOException {
+		// TODO Auto-generated method stub
+		// 백준에서 시간초과 해결하기 위해 문자열 입력시 사용
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int su1,su2;
+//		String input = br.readLine();
+		int n = Integer.parseInt(br.readLine());
 		
-		su1 = 50000;
-		su2 = 200;
+		String [] list = new String[n];
 		
-		int res = su1 / su2;
-		
-		System.out.println(res);
-		
-		System.out.println(su2 * 250);
-		
-		
+		for(int i = 0; i < n; i++) {
+			String input = br.readLine();
+			list[i] = input.substring(0,1) + input.substring(input.length()-1, input.length());
+		}
+		br.close();
+		for(int i = 0; i < n; i++) {
+			System.out.println(list[i]);
+		}
+
 	}
 
 }
