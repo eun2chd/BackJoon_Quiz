@@ -1,32 +1,45 @@
 package Pool;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
 public class Main {
 
-	public static void main(String[] args)throws IOException {
-		// TODO Auto-generated method stub
-		// 백준에서 시간초과 해결하기 위해 문자열 입력시 사용
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	public static void main(String[] args) throws IOException {
 		
-//		String input = br.readLine();
-		int n = Integer.parseInt(br.readLine());
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String [] list = new String[n];
+		int n = Integer.parseInt(bf.readLine());
 		
-		for(int i = 0; i < n; i++) {
-			String input = br.readLine();
-			list[i] = input.substring(0,1) + input.substring(input.length()-1, input.length());
+		for(int i = 1; i <= n; i++) {
+			for(int j = 1; j <= n-i; j++) {
+				bw.write(" ");
+			}
+			for(int j=1; j <= 2*i-1; j++) {
+				bw.write("★");
+			}
+			bw.write("\n");
 		}
-		br.close();
-		for(int i = 0; i < n; i++) {
-			System.out.println(list[i]);
+		for(int i = n-1; i >= 1; i--) {
+			for(int j = 1; j <= n-i;j++) {
+				bw.write(" ");
+			}
+			for(int j = 1; j <= 2*i-1;j++) {
+				bw.write("★");
+			}
+			bw.write("\n");
 		}
+		
+		bw.flush();
+		bw.close();
 
 	}
-
 }
