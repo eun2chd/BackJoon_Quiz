@@ -1,20 +1,14 @@
-package Pool;
+package Chapter5;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
-public class Main {
+public class qz2 {
 
 	public static void main(String[] args) throws IOException {
-		
 		// TODO Auto-generated method stub
 		// 첫째 줄에 이 단어에서 가장 많이 사용된 알파벳을 대문자로 출력한다. 단, 가장 많이 사용된 알파벳이 여러 개 존재하는 경우에는 ?를 출력한다.
 		// Mississipi
@@ -24,14 +18,15 @@ public class Main {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String str = bf.readLine().toUpperCase();
+		System.out.println("문자입력");
+		String str = bf.readLine();
 		// 알파벳 카운트배열 
 		int[] alphas = new int[26];
 	
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-				if (ch >= 'A' && ch <= 'Z') {
-					alphas[ch - 'A']++;
+				if (ch >= 'a' && ch <= 'z') {
+					alphas[ch - 'a']++;
 				}
 		}
 		
@@ -55,6 +50,9 @@ public class Main {
 	        } else {
 	            System.out.println(mostFrequent);
 	        }
-
+		bw.flush(); // 출력
+		bw.close(); // 닫음
+	
 	}
+
 }

@@ -10,8 +10,8 @@ import java.util.Scanner;
 	public class codetest2{
 	    public static void main(String[] args) {
 	        A b = new B();
-	        b.paint();
-	        b.draw();
+	        b.paint(); // bdc
+	        b.draw();  // d
 	    }
 	}
 	 
